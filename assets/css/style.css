@@ -1882,4 +1882,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+  .rounded-rectangle-button {
+    display: inline-block;
+    padding: 10px 20px; /* Điều chỉnh khoảng cách xung quanh nút */
+    border-radius: 15px; /* Tạo viền tròn ở 4 góc */
+    background-color: blue; /* Màu nền của nút */
+    color: white; /* Màu chữ trắng */
+    font-weight: bold;
+    text-decoration: none; /* Loại bỏ gạch chân của liên kết */
+    border: none; /* Loại bỏ đường viền */
+    cursor: pointer;
+  }
 }
