@@ -220,14 +220,35 @@ article.active {
   100% { opacity: 1; }
 }
 
-.h2,
+.h2 {
+  text-align: left;
+  animation: colorRotate 6s linear 0s infinite;
+}
+
+@keyframes colorRotate {
+  from {
+    color: #6666ff;
+  }
+  10% {
+    color: #0099ff;
+  }
+  50% {
+    color: #77faff;
+  }
+  75% {
+    color: #64ffb7;
+  }
+  100% {
+    color: #fa6aff;
+  }
+}
 .h3,
 .h4,
 .h5 {
   color: var(--white-2);
   text-transform: capitalize;
 }
-
+/*tùy chỉnh kích thước chữ */
 .h2 { font-size: var(--fs-1); }
 
 .h3 { font-size: var(--fs-2); }
@@ -471,7 +492,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: hsla(271, 91%, 45%, 0.75);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
