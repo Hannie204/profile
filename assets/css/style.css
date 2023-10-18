@@ -464,20 +464,21 @@ main {
 
 .social-list {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center; 
+  align-items: center; 
   gap: 15px;
   padding-bottom: 4px;
   padding-left: 7px;
 }
 
 .social-item .social-link {
-  color: var(--light-gray-70);
-  font-size: 18px;
+  color: rgb(89, 0, 255);
+  font-size: 25px;
 }
 
-
-.social-item .social-link:hover { color: var(--light-gray); }
+.social-item .social-link:hover {
+  color: var(--light-gray);
+}
 
 
 
@@ -1932,15 +1933,35 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 .rounded-rectangle-button {
   display: inline-block;
-  padding: 10px 20px; /* Điều chỉnh khoảng cách xung quanh nút */
-  border-radius: 15px; /* Tạo viền tròn ở 4 góc */
-  background-color: blue; /* Màu nền của nút */
-  color: white; /* Màu chữ trắng */
+  padding: 10px 20px; 
+  border-radius: 15px; 
+  background-color: blue; 
+  color: white; 
   font-weight: bold;
-  text-decoration: none; /* Loại bỏ gạch chân của liên kết */
-  border: none; /* Loại bỏ đường viền */
+  text-decoration: none; 
+  border: none;
   cursor: pointer;
-  max-width: 100%; /* Điều chỉnh chiều rộng tối đa */
-  width: auto; /* Đặt chiều rộng tự động */
-  text-align: center; /* Căn giữa nội dung */
+  max-width: 100%;
+  width: auto;
+  text-align: center; 
 }
+.container {
+  text-align: center;
+}
+
+/* CSS cho máy tính */
+@media (min-width: 768px) {
+  .image {
+    max-width: 100%;
+    border-radius: 15px;
+    pointer-events: auto; 
+  }
+}
+
+/* CSS cho điện thoại di động */
+@media (max-width: 1250px) {
+  .image {
+    display: none; 
+  }
+}
+
