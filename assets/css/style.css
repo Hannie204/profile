@@ -1925,8 +1925,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* CSS cho video trên máy tính */
   @media (min-width: 769px) {
     .video-container iframe {
-      width: 560px;
-      height: 315px;
+      width: 100%;
+      height: 100%;
     }
   }
   
