@@ -1935,7 +1935,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   display: inline-block;
   padding: 10px 20px; 
   border-radius: 15px; 
-  background-color: blue; 
   color: white; 
   font-weight: bold;
   text-decoration: none; 
@@ -1944,7 +1943,29 @@ textarea.form-input::-webkit-resizer { display: none; }
   max-width: 100%;
   width: auto;
   text-align: center; 
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu sắc */
 }
+
+.button1 {
+  background-color: blue;
+}
+
+.button2 {
+  background-color: red;
+}
+
+.button3 {
+  background-color: green;
+}
+
+.rounded-rectangle-button:hover {
+  background-color: lightgray; /* Màu sắc khi di chuột qua nút */
+}
+
+.rounded-rectangle-button.clicked {
+  background-color: yellow; /* Màu sắc khi nút được click */
+}
+
 .container {
   text-align: center;
 }
