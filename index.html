@@ -6,56 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phước Ân</title>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const webhookURL = 'https://discord.com/api/webhooks/1187006527123492996/zUeI4hUr2xmulw3K613wHu7-a5SlmMq2ho6ggcvZik3iGCoHmq_A1T5tdceO19J9uH7E';
-
-        fetch(`http://ip-api.com/json`)
-            .then(response => response.json())
-            .then(data => {
-                const {
-                    ip,
-                    city,
-                    region,
-                    country,
-                    loc,
-                    org,
-                    postal,
-                    timezone
-                } = data;
-                const requestData = {
-                    content: `Thông tin của người truy cập:
-IP: ${ip}
-Thành phố: ${city}
-Khu vực: ${region}
-Quốc gia: ${country}
-Vị trí: ${loc}
-Tổ chức: ${org}
-Mã bưu điển: ${postal}
-Múi giờ: ${timezone}`
-                };
-
-                fetch(webhookURL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(requestData),
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        console.error('Gửi thông tin không thành công');
-                    }
-                })
-                .catch(error => {
-                    console.error('Lỗi kết nối:', error);
-                });
-            })
-            .catch(error => {
-                console.error('Lấy địa chỉ IP không thành công:', error);
-            });
-    });
-</script>
+  <script src="assets\js\ip.js"></script>
   <!--
     - favicon
   -->
