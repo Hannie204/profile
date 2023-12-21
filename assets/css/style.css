@@ -1985,4 +1985,28 @@ textarea.form-input::-webkit-resizer { display: none; }
     display: none; 
   }
 }
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#countdown {
+  font-size: 1.5em;
+  text-align: center;
+  color: red; /* Màu chữ đỏ */
+  font-weight: bold; /* Làm đậm chữ */
+}
+
+#animeName {
+  font-size: 2em;
+  margin-top: 10px;
+  text-align: center;
+  color: rgb(108, 184, 255); /* Màu chữ đỏ */
+  font-weight: bold; /* Làm đậm chữ */
+}
+
 
